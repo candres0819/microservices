@@ -1,5 +1,5 @@
 # REST Microservices
-	[Microservices Reference Architecture] (https://www.linkedin.com/pulse/microservices-reference-architecture-spring-boot-cloud-anil-allewar)
+[Microservices Reference Architecture](https://www.linkedin.com/pulse/microservices-reference-architecture-spring-boot-cloud-anil-allewar)
 
 # Customers Stores
 Copy from [Spring Cloud Test](https://github.com/spring-cloud-samples/customers-stores)
