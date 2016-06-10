@@ -1,4 +1,4 @@
-package com.carloscardona.microservices.services.stores;
+package com.carloscardona.microservices.services.stores.dao;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -19,6 +19,7 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindException;
 
+import com.carloscardona.microservices.services.stores.dao.StoreRepository;
 import com.carloscardona.microservices.services.stores.model.Address;
 import com.carloscardona.microservices.services.stores.model.Store;
 
@@ -36,7 +37,6 @@ public class StoreInitializer {
 		if (repository.count() != 0) {
 			return;
 		}
-
 		List<Store> stores = readStores();
 		log.info("Importing {} stores into MongoDB…", stores.size());
 		repository.save(stores);

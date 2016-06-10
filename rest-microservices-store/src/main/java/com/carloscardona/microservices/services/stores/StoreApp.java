@@ -6,12 +6,13 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.Cloud;
 import org.springframework.cloud.CloudFactory;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.domain.Page;
@@ -22,11 +23,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.carloscardona.microservices.services.stores.dao.StoreRepository;
 import com.carloscardona.microservices.services.stores.model.Store;
 
-@EnableAutoConfiguration
-@ComponentScan
+@EnableEurekaClient
+@EnableCircuitBreaker
 @EnableDiscoveryClient
+@SpringBootApplication
 public class StoreApp extends RepositoryRestConfigurerAdapter {
 
 	@Override

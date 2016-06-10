@@ -32,7 +32,7 @@ import org.springframework.data.geo.Point;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.carloscardona.microservices.services.stores.StoreApp;
-import com.carloscardona.microservices.services.stores.StoreRepository;
+import com.carloscardona.microservices.services.stores.dao.StoreRepository;
 import com.carloscardona.microservices.services.stores.model.Address;
 import com.carloscardona.microservices.services.stores.model.Store;
 

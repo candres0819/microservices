@@ -6,6 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * 
+ * @author candr
+ *
+ */
 @Entity
 public class Customer implements Serializable {
 
@@ -13,12 +18,32 @@ public class Customer implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String firstname;
 	private String lastname;
 	private Address address;
+
+	public Customer() {
+		super();
+	}
+
+	/**
+	 * 
+	 * @param id
+	 * @param firstname
+	 * @param lastname
+	 * @param address
+	 */
+	public Customer(Long id, String firstname, String lastname, Address address) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.address = address;
+	}
 
 	/**
 	 * @return the id
