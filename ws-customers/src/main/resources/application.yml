@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
+    region: default
+    prefer-same-zone-eureka: false
+spring:
+  profiles: mysql
+  datasource:
+    url: jdbc:mysql://localhost/test
+    username: root
+    password: null
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
