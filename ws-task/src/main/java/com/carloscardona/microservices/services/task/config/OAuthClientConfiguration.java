@@ -1,4 +1,4 @@
-package com.rohitghatol.microservices.task.config;
+package com.carloscardona.microservices.services.task.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.rohitghatol.microservices.task.apis;
+package com.carloscardona.microservices.services.task.apis;
 
 import java.util.Calendar;
 
@@ -7,10 +7,10 @@ import org.springframework.security.oauth2.client.OAuth2RestOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import com.carloscardona.microservices.services.task.model.CommentCollectionResource;
+import com.carloscardona.microservices.services.task.model.CommentResource;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-import com.rohitghatol.microservices.task.model.CommentCollectionResource;
-import com.rohitghatol.microservices.task.model.CommentResource;
 
 /**
  * The {@link HystrixCommand} works since Spring makes a proxy to intercept the

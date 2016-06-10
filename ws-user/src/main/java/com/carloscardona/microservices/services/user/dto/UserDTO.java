@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.rohitghatol.microservices.user.dto;
+package com.carloscardona.microservices.services.user.dto;
 
 
 /**

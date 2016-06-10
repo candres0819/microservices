@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.rohitghatol.microservices.task.config;
+package com.carloscardona.microservices.services.user.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -18,8 +18,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
  */
 @Configuration
 @EnableResourceServer
-public class TaskConfiguration extends ResourceServerConfigurerAdapter {
-
+public class UserConfiguration extends ResourceServerConfigurerAdapter {
+	
 	/**
 	 * Provide security so that endpoints are only served if the request is
 	 * already authenticated.
@@ -41,7 +41,7 @@ public class TaskConfiguration extends ResourceServerConfigurerAdapter {
 		            .antMatchers(HttpMethod.DELETE, "/**").access("#oauth2.hasScope('write')");
 		// @formatter:on
 	}
-
+	
 	/**
 	 * Id of the resource that you are letting the client have access to.
 	 * Supposing you have another api ("say api2"), then you can customize the

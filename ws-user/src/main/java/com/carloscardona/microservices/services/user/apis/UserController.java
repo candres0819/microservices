@@ -1,4 +1,4 @@
-package com.rohitghatol.microservices.user.apis;
+package com.carloscardona.microservices.services.user.apis;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rohitghatol.microservices.user.dto.UserDTO;
+import com.carloscardona.microservices.services.user.dto.UserDTO;
 
 /**
  * REST endpoint for the user functionality

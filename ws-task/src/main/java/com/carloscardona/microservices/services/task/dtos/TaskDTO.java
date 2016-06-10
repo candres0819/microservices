@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.rohitghatol.microservices.task.dtos;
+package com.carloscardona.microservices.services.task.dtos;
 
-import com.rohitghatol.microservices.task.model.CommentCollectionResource;
+import com.carloscardona.microservices.services.task.model.CommentCollectionResource;
 
 /**
  * Represents Todo Task.

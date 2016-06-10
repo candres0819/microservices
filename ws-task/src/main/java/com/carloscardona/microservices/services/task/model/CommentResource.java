@@ -1,4 +1,4 @@
-package com.rohitghatol.microservices.task.model;
+package com.carloscardona.microservices.services.task.model;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
