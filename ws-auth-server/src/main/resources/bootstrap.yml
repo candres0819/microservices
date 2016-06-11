@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ws-store
+    name: ws-auth-server
   cloud:
     config:
       uri: http://localhost:8081

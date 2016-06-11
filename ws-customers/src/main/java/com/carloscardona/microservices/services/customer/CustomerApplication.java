@@ -33,9 +33,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @SpringBootApplication
-public class CustomerApp {
+public class CustomerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CustomerApp.class, args);
+		SpringApplication.run(CustomerApplication.class, args);
 	}
 }

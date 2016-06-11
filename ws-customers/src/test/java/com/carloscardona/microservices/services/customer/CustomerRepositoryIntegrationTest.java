@@ -16,7 +16,7 @@ import com.carloscardona.microservices.services.customer.model.Customer;
 import com.carloscardona.microservices.services.customer.model.Location;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = CustomerApp.class)
+@SpringApplicationConfiguration(classes = CustomerApplication.class)
 public class CustomerRepositoryIntegrationTest {
 
 	@Autowired

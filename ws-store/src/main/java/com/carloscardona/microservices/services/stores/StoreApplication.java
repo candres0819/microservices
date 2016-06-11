@@ -30,7 +30,7 @@ import com.carloscardona.microservices.services.stores.model.Store;
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @SpringBootApplication
-public class StoreApp extends RepositoryRestConfigurerAdapter {
+public class StoreApplication extends RepositoryRestConfigurerAdapter {
 
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
@@ -42,7 +42,7 @@ public class StoreApp extends RepositoryRestConfigurerAdapter {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(StoreApp.class, args);
+		SpringApplication.run(StoreApplication.class, args);
 	}
 
 	@Controller

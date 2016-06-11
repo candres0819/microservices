@@ -1,11 +1,6 @@
 spring:
   application:
-    # Name of the service that is using with Zuul routes to forward specific requests to this service.
-    name: customers
+    name: ws-customers
   cloud:
     config:
-      # Define the URL from where this service would pick up it's external configuration. 
-      # Note that it is pointing to the config-server aplication, Eureka.
       uri: http://localhost:8081
-server:
-  port: 9000

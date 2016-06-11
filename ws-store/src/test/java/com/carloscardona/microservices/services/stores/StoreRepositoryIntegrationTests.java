@@ -31,7 +31,7 @@ import org.springframework.data.geo.Metrics;
 import org.springframework.data.geo.Point;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.carloscardona.microservices.services.stores.StoreApp;
+import com.carloscardona.microservices.services.stores.StoreApplication;
 import com.carloscardona.microservices.services.stores.dao.StoreRepository;
 import com.carloscardona.microservices.services.stores.model.Address;
 import com.carloscardona.microservices.services.stores.model.Store;
@@ -42,7 +42,7 @@ import com.carloscardona.microservices.services.stores.model.Store;
  * @author Oliver Gierke
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = StoreApp.class)
+@SpringApplicationConfiguration(classes = StoreApplication.class)
 public class StoreRepositoryIntegrationTests {
 
 	@Autowired StoreRepository repository;
