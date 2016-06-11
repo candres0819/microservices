@@ -1,4 +1,4 @@
-package com.rohitghatol.microservice.auth.config;
+package com.carloscardona.microservices.services.auth.config;
 
 import javax.sql.DataSource;
 
