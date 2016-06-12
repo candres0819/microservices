@@ -5,9 +5,9 @@ package com.carloscardona.microservices.services.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * The boot application class that defines the spring boot application to have the following properties<br>
@@ -31,7 +31,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableAutoConfiguration
 @ComponentScan
 @EnableEurekaClient
-@EnableResourceServer
+@EnableCircuitBreaker
 public class UserApplication {
 
 	public static void main(String[] args) {
