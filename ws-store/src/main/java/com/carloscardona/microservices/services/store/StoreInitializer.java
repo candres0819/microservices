@@ -1,4 +1,4 @@
-package com.carloscardona.microservices.services.stores;
+package com.carloscardona.microservices.services.store;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +19,9 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindException;
 
-import com.carloscardona.microservices.services.stores.dao.StoreRepository;
-import com.carloscardona.microservices.services.stores.model.Address;
-import com.carloscardona.microservices.services.stores.model.Store;
+import com.carloscardona.microservices.services.store.dao.StoreRepository;
+import com.carloscardona.microservices.services.store.model.Address;
+import com.carloscardona.microservices.services.store.model.Store;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -33,7 +33,6 @@ public class StoreInitializer {
 
 	@Autowired
 	public StoreInitializer(StoreRepository repository, MongoOperations operations) throws Exception {
-
 		if (repository.count() != 0) {
 			return;
 		}

@@ -3,6 +3,7 @@ package com.carloscardona.microservices.services.stores;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.runner.RunWith;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -10,12 +11,13 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.carloscardona.microservices.services.stores.model.Store;
+import com.carloscardona.microservices.services.store.model.Store;
 
 /**
  * @author Spencer Gibb
@@ -24,11 +26,11 @@ import com.carloscardona.microservices.services.stores.model.Store;
 @EnableAutoConfiguration
 @EnableDiscoveryClient
 @EnableFeignClients
+@RunWith(SpringJUnit4ClassRunner.class)
 public class TestStoreApp {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = new SpringApplicationBuilder()
-				.web(false).sources(TestStoreApp.class).run(args);
+		ConfigurableApplicationContext context = new SpringApplicationBuilder().web(false).sources(TestStoreApp.class).run(args);
 		StoreClient client = context.getBean(StoreClient.class);
 		List<Map<String, ?>> stores = client.getStores();
 		if (!stores.isEmpty()) {
@@ -44,7 +46,6 @@ public class TestStoreApp {
 		List<Map<String, ?>> getStores();
 
 		@RequestMapping(method = RequestMethod.GET, value = "/stores/{storeId}", produces = "application/hal+json")
-		Store getStore(@PathVariable("storeId") String storeId,
-				@RequestParam("myparam") String myparam);
+		Store getStore(@PathVariable("storeId") String storeId, @RequestParam("myparam") String myparam);
 	}
 }

@@ -3,3 +3,7 @@ logging:
      org:
        springframework:
          security: DEBUG
+         
+         
+mail:
+  domain: test@test.com

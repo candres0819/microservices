@@ -1,9 +1,8 @@
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8081/eureka/
-    region: default
-    prefer-same-zone-eureka: false
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
 spring:
   profiles: mysql
   datasource:
@@ -14,6 +13,3 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-logging:
-  level:
-    com.netflix.discovery: 'OFF'

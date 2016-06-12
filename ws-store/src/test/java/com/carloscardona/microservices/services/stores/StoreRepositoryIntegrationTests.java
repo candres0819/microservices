@@ -31,10 +31,10 @@ import org.springframework.data.geo.Metrics;
 import org.springframework.data.geo.Point;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.carloscardona.microservices.services.stores.StoreApplication;
-import com.carloscardona.microservices.services.stores.dao.StoreRepository;
-import com.carloscardona.microservices.services.stores.model.Address;
-import com.carloscardona.microservices.services.stores.model.Store;
+import com.carloscardona.microservices.services.store.StoreApplication;
+import com.carloscardona.microservices.services.store.dao.StoreRepository;
+import com.carloscardona.microservices.services.store.model.Address;
+import com.carloscardona.microservices.services.store.model.Store;
 
 /**
  * Integration tests for {@link StoreRepository}.

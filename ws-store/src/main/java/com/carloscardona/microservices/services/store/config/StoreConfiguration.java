@@ -1,10 +1,13 @@
 /**
  * 
  */
-package com.carloscardona.microservices.services.user.config;
+package com.carloscardona.microservices.services.store.config;
 
+import org.springframework.cloud.Cloud;
+import org.springframework.cloud.CloudFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
@@ -18,20 +21,23 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
  */
 @Configuration
 @EnableResourceServer
-public class UserConfiguration extends ResourceServerConfigurerAdapter {
+public class StoreConfiguration extends ResourceServerConfigurerAdapter {
+
+	@Configuration
+	@Profile("cloud")
+	protected static class CloudFoundryConfiguration {
+		@Bean
+		public Cloud cloud() {
+			return new CloudFactory().getCloud();
+		}
+	}
 
 	/**
 	 * Provide security so that endpoints are only served if the request is already authenticated.
 	 */
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		// @formatter:off
-		http.requestMatchers().antMatchers("/**").and().authorizeRequests().anyRequest().authenticated().antMatchers(HttpMethod.GET, "/**")
-				.access("#oauth2.hasScope('read')").antMatchers(HttpMethod.OPTIONS, "/**").access("#oauth2.hasScope('read')")
-				.antMatchers(HttpMethod.POST, "/**").access("#oauth2.hasScope('write')").antMatchers(HttpMethod.PUT, "/**")
-				.access("#oauth2.hasScope('write')").antMatchers(HttpMethod.PATCH, "/**").access("#oauth2.hasScope('write')")
-				.antMatchers(HttpMethod.DELETE, "/**").access("#oauth2.hasScope('write')");
-		// @formatter:on
+
 	}
 
 	/**

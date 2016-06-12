@@ -1,4 +1,4 @@
-package com.carloscardona.microservices.services.task.apis;
+package com.carloscardona.microservices.services.task.api;
 
 import java.util.ArrayList;
 import java.util.Arrays;

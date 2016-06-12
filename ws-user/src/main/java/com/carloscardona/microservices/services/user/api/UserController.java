@@ -1,4 +1,4 @@
-package com.carloscardona.microservices.services.user.apis;
+package com.carloscardona.microservices.services.user.api;
 
 import java.util.Arrays;
 import java.util.List;

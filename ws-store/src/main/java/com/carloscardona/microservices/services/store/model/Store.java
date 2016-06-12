@@ -1,4 +1,4 @@
-package com.carloscardona.microservices.services.stores.model;
+package com.carloscardona.microservices.services.store.model;
 
 import java.io.Serializable;
 
