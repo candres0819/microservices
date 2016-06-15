@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
  * 
  * Note that the server is also a Eureka client so as to register with the Eureka server and be auto-discovered by other Eureka clients.
  *
- * @author rohitghatol
+ * @author candr
  */
 
 @ComponentScan

@@ -16,7 +16,6 @@ CREATE TABLE `ClientDetails` (
 
 
 
-
 DROP TABLE IF EXISTS `authorities`;
 CREATE TABLE `authorities` (
   `username` varchar(50) NOT NULL,
